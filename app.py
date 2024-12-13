@@ -46,5 +46,9 @@ def hello(name):
     app.logger.debug(f'Hello page accessed with name: {name}')
     return render_template('hello.html', name=name)
 
+@app.route('/test')
+def test():
+    return 'Test route is working!'
+
 if __name__ == '__main__':
     app.run(debug=True)
