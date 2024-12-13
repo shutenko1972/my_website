@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Шапка сайта</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Главная</a></li>
+                <li><a href="{{ url_for('section1') }}">Секция 1</a></li>
+                <li><a href="{{ url_for('section2') }}">Секция 2</a></li>
+                <li><a href="{{ url_for('section3') }}">Секция 3</a></li>
+                <li><a href="{{ url_for('section4') }}">Секция 4</a></li>
+                <li><a href="{{ url_for('section5') }}">Секция 5</a></li>
+                <li><a href="{{ url_for('about') }}">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Подвал сайта</p>
+    </footer>
+</body>
+</html>
