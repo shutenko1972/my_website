@@ -50,5 +50,9 @@ def hello(name):
 def test():
     return 'Test route is working!'
 
+@app.route('/status')
+def status():
+    return 'Application is running'
+
 if __name__ == '__main__':
     app.run(debug=True)
